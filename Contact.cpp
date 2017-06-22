@@ -76,14 +76,13 @@ namespace sict {
                 int b= 10000000;
                 int c = int(a/b);
                 int d, e;
-                int temp;
                 if(c>1001 && c<99999){
                     e = c % 1000;
                     d = c / 1000;
                     real_Phonenumbers = a % 1000000;
-                    temp = a / 10000;
+                    int temp = a/10000;
                     int first_PN = temp %1000;
-                    last_PN = (int) (real_Phonenumbers % 10000);
+                    last_PN = real_Phonenumbers % 10000;
                     cout << "(+" << d << ")" << " " << e << " " << first_PN
                          << "-" << last_PN << endl;
                 }
