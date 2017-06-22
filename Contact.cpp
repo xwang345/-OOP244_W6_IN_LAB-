@@ -3,6 +3,7 @@
 //
 //W6_in_lab */
 #include <iostream>
+#include <cstring>
 #include "Contact.h"
 
 using namespace std;
@@ -15,11 +16,11 @@ namespace sict {
     }
 
     bool Contact::isEmpty() const {
-        bool ret = true;
+        bool ret = false;
         if (m_name[0] != '\0') {
-            ret = false;
+            ret = true;
         }else if(m_phoneNumbers != nullptr){
-            ret = false;
+            ret = true;
         }
 
         return ret;
@@ -31,7 +32,7 @@ namespace sict {
     }
 
     Contact::Contact(const char *Name, long long* PhoneNum, int Num_of_Phone) {
-        if (NULL != Name) {
+        if (Name != nullptr) {
             if (isEmpty()) {
                 strcpy(m_name, Name);
                 m_noOfPhoneNumbers = Num_of_Phone;
@@ -65,7 +66,7 @@ namespace sict {
 
 
     void Contact::display() const{
-        if (isEmpty()) {
+        if (!isEmpty()) {
             cout << "Empty contact!" << endl;
         }else{
             cout << m_name << endl;
