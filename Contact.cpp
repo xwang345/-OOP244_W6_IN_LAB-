@@ -48,7 +48,7 @@ namespace sict {
                     m_phoneNumbers = nullptr;
                 }
             } else {
-                for (int i = 0; i < 21; i++) {
+                for (int i = 0; i < 20; i++) {
                     m_name[i] = '\0';
                 }
                 m_phoneNumbers = nullptr;

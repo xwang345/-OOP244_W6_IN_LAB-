@@ -9,7 +9,7 @@ namespace sict {
 
     class Contact {
     private:
-        char m_name[21];
+        char m_name[20];
         long long* m_phoneNumbers;
         int m_noOfPhoneNumbers;
     public:
