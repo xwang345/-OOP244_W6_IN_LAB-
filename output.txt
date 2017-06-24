@@ -14,7 +14,7 @@ Empty contact!
 ----------------------------------------
 Testing the constructor with parameters!
 ----------------------------------------
-A contact with a ver
+A contact with a ve
 ----------------------------------------
 
 ----------------------------------------

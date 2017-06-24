@@ -23,10 +23,6 @@ namespace sict {
         void display() const;
         // TODO: add the isEmpty function here
         bool isEmpty() const;
-
-    public:
-        Contact(const Contact& other) = delete;
-        Contact& operator=(const Contact& other) = delete;
     };
 }
 #endif

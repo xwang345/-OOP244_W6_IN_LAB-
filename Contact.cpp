@@ -34,7 +34,7 @@ namespace sict {
     Contact::Contact(const char *Name, long long* PhoneNum, int Num_of_Phone) {
         if (Name != nullptr) {
             if (isEmpty()) {
-                strcpy(m_name, Name);
+                strncpy(m_name, Name,19);
                 m_noOfPhoneNumbers = Num_of_Phone;
 
                 //TODO allocate dynamic memory
@@ -48,13 +48,13 @@ namespace sict {
                     m_phoneNumbers = nullptr;
                 }
             } else {
-                for (int i = 0; i < 20; i++) {
+                for (int i = 0; i < 21; i++) {
                     m_name[i] = '\0';
                 }
                 m_phoneNumbers = nullptr;
                 m_noOfPhoneNumbers = 0;
             }
-        } else{
+        } else {
             for (int i = 0; i < 21; i++) {
                 m_name[i] = '\0';
             }
@@ -69,7 +69,8 @@ namespace sict {
         if (!isEmpty()) {
             cout << "Empty contact!" << endl;
         }else{
-            cout << m_name << endl;
+	    cout <<  m_name << endl;
+            //cout << endl; 
             for(int i = 0; i < m_noOfPhoneNumbers; i++){
                 long long a = m_phoneNumbers[i];
                 long long real_Phonenumbers;
